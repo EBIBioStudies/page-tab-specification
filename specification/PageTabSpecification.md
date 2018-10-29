@@ -1,4 +1,4 @@
-## Page Tab Elements
+# Page Tab Elements
 Page tab has several elements that allow to represent a submission:
 * Attribute
 * Submission
@@ -8,7 +8,7 @@ Page tab has several elements that allow to represent a submission:
 * Files
 * Links
 
-### Attribute
+## Attribute
 An attribute is the most basic element in page tab because any element defined in a submission, may have attributes. An
 attribute has the following characteristics:
 * It's defined by a name / value combination
@@ -16,7 +16,7 @@ attribute has the following characteristics:
 * Its name may have additional details. These are called _Name Attributes_
 * Its value may have additional details. These are called _Value Attributes_
 
-#### Syntax
+### Syntax
 ```
 Name	The Name
 Value	The Value
@@ -24,9 +24,9 @@ Value	The Value
 [Value Attribute]	The value attribute value
 ```
 
-#### Examples
+### Examples
 
-##### Simple Attribute
+#### Simple Attribute
 
 **TSV**
 ```
@@ -47,21 +47,20 @@ Study Type	RNA-seq of non coding RNA
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <attributes>
   <attribute>
     <name>Study Type</name>
     <value>RNA-seq of non coding RNA</value>
   </attribute>
 </attributes>
-```
-</p>
+
+</pre>
 </details>
 
 
-##### Detailed Attribute
+#### Detailed Attribute
 **TSV**
 ```
 Study Type	RNA-seq of non coding RNA
@@ -70,9 +69,8 @@ Study Type	RNA-seq of non coding RNA
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   "attributes": [{
     "name": "Study Type",
@@ -87,14 +85,13 @@ Study Type	RNA-seq of non coding RNA
     }]
   }]
 }
-```
-</p>
+
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <attributes>
   <attribute>
     <name>Study Type</name>
@@ -109,11 +106,11 @@ Study Type	RNA-seq of non coding RNA
 </valqual>
   </attribute>
 </attributes>
-```
-</p>
+
+</pre>
 </details>
 
-##### Reference Attribute
+#### Reference Attribute
 For this example, let's assume there's already an attribute with value "Org1"
 
 **TSV**
@@ -122,9 +119,8 @@ For this example, let's assume there's already an attribute with value "Org1"
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   "attributes": [{
     "name": "affiliation",
@@ -132,34 +128,33 @@ For this example, let's assume there's already an attribute with value "Org1"
     "isReference": "true"
   }]
 }
-```
-</p>
+
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <attributes>
   <attribute reference="true">
     <name>affiliation</name>
     <value>Org1</value>
   </attribute>
 </attributes>
-```
-</p>
+
+</pre>
 </details>
 
-### Submission
+## Submission
 Root element of the submission. A submission element is created using the reserved word _Submission_. It's mandatory to have this element.
 
-#### Syntax
+### Syntax
 ```
 Submission	AccNo
 <Attributes>
 ```
 
-#### Examples
+### Examples
 **TSV**
 ```
 Submission	E-MTAB-2950
@@ -169,9 +164,8 @@ RootPath	E-MTAB/E-MTAB-2950
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   "accno": "E-MTAB-2950",
   "attributes": [{
@@ -187,15 +181,12 @@ RootPath	E-MTAB/E-MTAB-2950
   "type": "submission"
 }
 
-```
-
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <submission acc="E-MTAB-2950">
   <attributes>
     <attribute>
@@ -212,25 +203,24 @@ RootPath	E-MTAB/E-MTAB-2950
     </attribute>
   </attributes>
 </submission>
-```
 
-</p>
+</pre>
 </details>
 
-### Section
+## Section
 A section is a part of the submission used to group other elements like files, links or even other sections. There're
 some rules related to sections:
 1. Sections can be of any type so, there's no reserved word for them
 2. The first section of a submission definition will be the _Root Section_
 3. Every submission should have at least a root section
 
-#### Syntax
+### Syntax
 ```
 Type	AccNo
 <Attributes>
 ```
 
-#### Examples
+### Examples
 **TSV**
 ```
 Study	s-E-MTAB-2950
@@ -239,9 +229,8 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -259,15 +248,13 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <submission>
 
   ...
@@ -288,21 +275,20 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
   ...
 
 </submission>
-```
 
-</p>
+</pre>
 </details>
 
-### Subsection
+## Subsection
 A subsection is a section contained inside another section. Any section may have several subsections.
 
-#### Syntax
+### Syntax
 ```
 Type	AccNo	ParentAccNo
 <Attributes>
 ```
 
-#### Examples
+### Examples
 **TSV**
 ```
 Data	DT-1	s-E-MTAB-2950
@@ -311,9 +297,8 @@ Description	The data for zygotic transcription in mammals
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -340,15 +325,13 @@ Description	The data for zygotic transcription in mammals
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <submission>
 
   ...
@@ -379,12 +362,11 @@ Description	The data for zygotic transcription in mammals
   ...
 
 </submission>
-```
 
-</p>
+</pre>
 </details>
 
-### Sections Table
+## Sections Table
 A sections table is an element that allows to group several sections that will be displayed as a table by the UI. Rules:
 * You can place as many section as you want in a sections table
 * The sections in the table can NOT contain files, links nor subsections
@@ -392,14 +374,14 @@ A sections table is an element that allows to group several sections that will b
 * The parent accNo is optional
 * If a parent accNo is provided, all the sections in the table will become subsections of that section
 
-#### Syntax
+### Syntax
 ```
 Type[Parent AccNo (optional)]	Attr1	Atrr2	AttrN
 AccNo1	Attr1 Value	Attr2 Value	AttrN Value
 AccNo2	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
-#### Examples
+### Examples
 **TSV**
 ```
 Data[s-E-MTAB-2950]	Title	Description
@@ -408,9 +390,8 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -447,15 +428,13 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <submission>
 
   ...
@@ -500,26 +479,25 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
   ...
 
 </submission>
-```
 
-</p>
+</pre>
 </details>
 
-### Files
+## Files
 This element represents a file that is attached to a submission section. Whenever a file is defined, it'll be attached
 to the immediately previously defined section or subsection. Files can be represented in two ways: single file or files
 table.
 
-#### Single File
+### Single File
 Represents a single file attached to a section or subsection. The reserved word _File_ is used to define a single file.
 
-##### Syntax
+#### Syntax
 ```
 File	Path
 <Attributes>
 ```
 
-#### Examples
+### Examples
 **TSV**
 ```
 File	plates/J_Sero_plate_keys.xlsx
@@ -528,9 +506,8 @@ Type	XLSX File
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -555,15 +532,13 @@ Type	XLSX File
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <section acc="s-E-MTAB-2950" type="Study">
   ...
 
@@ -586,15 +561,14 @@ Type	XLSX File
   ...
 
 </section>
-```
 
-</p>
+</pre>
 </details>
 
-#### Files Table
+### Files Table
 Represents a group of files attached to a section or subsection. The reserved word _Files_ is used to define a files table
 
-##### Syntax
+#### Syntax
 ```
 Files	Attr1	Attr2	AttrN
 File1 Path	Attr1 Value	Attr2 Value	AttrN Value
@@ -602,7 +576,7 @@ File2 Path	Attr1 Value	Attr2 Value	AttrN Value
 File3 Path	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
-##### Examples
+#### Examples
 **TSV**
 ```
 Files	Description	Type
@@ -611,9 +585,8 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -647,15 +620,13 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <section acc="s-E-MTAB-2950" type="Study">
   ...
 
@@ -693,28 +664,27 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
   ...
 
 </section>
-```
 
-</p>
+</pre>
 </details>
 
-### Links
+## Links
 Element used to represent links that are related to a submission section. A link doesn't necessarily means a web page
 but it can also relate to other elements like genes, expressions, FTP locations, etc.
 
 Whenever a link is defined, it'll be attached to the immediately previously defined section or subsection. Links can be
 represented in two ways: single link or links table.
 
-#### Single Link
+### Single Link
 Represents a single link related to a section or subsection. The reserved word _Link_ is used to define a single link.
 
-##### Syntax
+#### Syntax
 ```
 Link	URL
 <Attributes>
 ```
 
-#### Examples
+### Examples
 **TSV**
 ```
 Link	ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data
@@ -722,9 +692,8 @@ Type	Raw data
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -746,15 +715,13 @@ Type	Raw data
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <section acc="s-E-MTAB-2950" type="Study">
   ...
 
@@ -773,16 +740,15 @@ Type	Raw data
   ...
 
 </section>
-```
 
-</p>
+</pre>
 </details>
 
-#### Links Table
+### Links Table
 Represents a group of links attached to a section or subsection. The reserved word _Links_ is used to define a links
 table
 
-##### Syntax
+#### Syntax
 ```
 Links	Attr1	Attr2	AttrN
 Link1 Url	Attr1 Value	Attr2 Value	AttrN Value
@@ -790,7 +756,7 @@ Link2 Url	Attr1 Value	Attr2 Value	AttrN Value
 Link3 Url	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
-##### Examples
+#### Examples
 **TSV**
 ```
 Links	Description	Type
@@ -799,9 +765,8 @@ ERR632210-ERR632217	ENA Runs	ENA
 ```
 
 <details><summary>JSON</summary>
-<p>
+<pre>
 
-```json
 {
   ...
 
@@ -835,15 +800,13 @@ ERR632210-ERR632217	ENA Runs	ENA
 
   ...
 }
-```
 
-</p>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<p>
+<pre>
 
-```xml
 <section acc="s-E-MTAB-2950" type="Study">
   ...
 
@@ -881,7 +844,6 @@ ERR632210-ERR632217	ENA Runs	ENA
   ...
 
 </section>
-```
 
-</p>
+</pre>
 </details>
