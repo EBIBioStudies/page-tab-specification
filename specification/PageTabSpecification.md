@@ -36,14 +36,12 @@ Study Type	RNA-seq of non coding RNA
 <details><summary>JSON</summary>
 <pre>
 
-```
 {
   "attributes": [{
     "name": "Study Type",
     "value": "RNA-seq of non coding RNA"
   }]
 }
-```
 
 </pre>
 </details>
