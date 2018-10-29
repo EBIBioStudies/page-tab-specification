@@ -47,16 +47,14 @@ Study Type	RNA-seq of non coding RNA
 </details>
 
 <details><summary>XML</summary>
-<pre lang="xml">
-{{
-<attributes>
-  <attribute>
-    <name>Study Type</name>
-    <value>RNA-seq of non coding RNA</value>
-  </attribute>
-</attributes>
-}}
-</pre>
+<xmp>
+  <attributes>
+    <attribute>
+      <name>Study Type</name>
+      <value>RNA-seq of non coding RNA</value>
+    </attribute>
+  </attributes>
+</xmp>
 </details>
 
 
