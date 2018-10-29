@@ -34,7 +34,7 @@ Study Type	RNA-seq of non coding RNA
 ```
 
 <details><summary>JSON</summary>
-<blockquote><pre><code>
+<pre>
 
 {
   "attributes": [{
@@ -43,20 +43,20 @@ Study Type	RNA-seq of non coding RNA
   }]
 }
 
-</code></pre></blockquote>
+</pre>
 </details>
 
 <details><summary>XML</summary>
-<blockquote><pre><code>
-
+<pre lang="xml">
+{{
 <attributes>
   <attribute>
     <name>Study Type</name>
     <value>RNA-seq of non coding RNA</value>
   </attribute>
 </attributes>
-
-</code></pre></blockquote>
+}}
+</pre>
 </details>
 
 
