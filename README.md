@@ -11,16 +11,6 @@ In order to define a submission, these rules must be followed:
 4. Any element may have attributes but it's not mandatory
 5. Any element different than _Submission_, _Files_ or _Links_ will be threaded as a section
 
-## Elements
-Page tab has several elements that allow to represent a submission:
-* Attribute
-* Submission
-* Section
-* Subsection
-* Sections Table
-* Files
-* Links
-
 Please refer to the resources below to find more information.
-* [Page Tab Elements Specification](specification/PageTabElementsSpecification.md)
+* [Page Tab Specification](specification/PageTabSpecification.md)
 * [All In One Example](examples/AllInOneExample.md)
