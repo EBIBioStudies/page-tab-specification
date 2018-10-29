@@ -48,12 +48,14 @@ Study Type	RNA-seq of non coding RNA
 
 <details><summary>XML</summary>
 <xmp>
-  <attributes>
-    <attribute>
-      <name>Study Type</name>
-      <value>RNA-seq of non coding RNA</value>
-    </attribute>
-  </attributes>
+
+<attributes>
+  <attribute>
+    <name>Study Type</name>
+    <value>RNA-seq of non coding RNA</value>
+  </attribute>
+</attributes>
+
 </xmp>
 </details>
 
