@@ -134,7 +134,8 @@ For this example, let's assume there's already an attribute with value "Org1"
 </xmp></details>
 
 ## Submission
-Root element of the submission. A submission element is created using the reserved word _Submission_. It's mandatory to have this element.
+Root element of the submission. A submission element is created using the reserved word _Submission_. It's mandatory to
+have this element in the submission definition.
 
 ### Syntax
 ```
@@ -343,18 +344,21 @@ Description	The data for zygotic transcription in mammals
 </xmp></details>
 
 ## Sections Table
-A sections table is an element that allows to group several sections that will be displayed as a table by the UI. Rules:
-* You can place as many section as you want in a sections table
+A sections table is used to group several sections that will be displayed as a table by the UI. Rules:
+* You can place as many sections as you want in a sections table
 * The sections in the table can NOT contain files, links nor subsections
 * All the sections in the table will have the same type and attributes
 * The parent accNo is optional
-* If a parent accNo is provided, all the sections in the table will become subsections of that section
+* If a parent accNo is NOT provided, every section in the table will become a new section
+* If a parent accNo is provided, all the sections in the table will become subsections of the section with the provided
+accNo
 
 ### Syntax
 ```
 Type[Parent AccNo (optional)]	Attr1	Atrr2	AttrN
 AccNo1	Attr1 Value	Attr2 Value	AttrN Value
 AccNo2	Attr1 Value	Attr2 Value	AttrN Value
+AccNoN	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
 ### Examples
@@ -541,7 +545,7 @@ Represents a group of files attached to a section or subsection. The reserved wo
 Files	Attr1	Attr2	AttrN
 File1 Path	Attr1 Value	Attr2 Value	AttrN Value
 File2 Path	Attr1 Value	Attr2 Value	AttrN Value
-File3 Path	Attr1 Value	Attr2 Value	AttrN Value
+FileN Path	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
 #### Examples
