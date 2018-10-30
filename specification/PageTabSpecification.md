@@ -64,8 +64,7 @@ Study Type	RNA-seq of non coding RNA
 (Seq Type)	RNA
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   "attributes": [{
@@ -82,11 +81,9 @@ Study Type	RNA-seq of non coding RNA
   }]
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <attributes>
   <attribute>
@@ -103,8 +100,7 @@ Study Type	RNA-seq of non coding RNA
   </attribute>
 </attributes>
 
-</pre>
-</details>
+</xmp></details>
 
 #### Reference Attribute
 For this example, let's assume there's already an attribute with value "Org1"
@@ -114,8 +110,7 @@ For this example, let's assume there's already an attribute with value "Org1"
 <affiliation>	Org1
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   "attributes": [{
@@ -125,11 +120,9 @@ For this example, let's assume there's already an attribute with value "Org1"
   }]
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <attributes>
   <attribute reference="true">
@@ -138,8 +131,7 @@ For this example, let's assume there's already an attribute with value "Org1"
   </attribute>
 </attributes>
 
-</pre>
-</details>
+</xmp></details>
 
 ## Submission
 Root element of the submission. A submission element is created using the reserved word _Submission_. It's mandatory to have this element.
@@ -159,8 +151,7 @@ ReleaseDate	2018-09-28
 RootPath	E-MTAB/E-MTAB-2950
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   "accno": "E-MTAB-2950",
@@ -177,11 +168,9 @@ RootPath	E-MTAB/E-MTAB-2950
   "type": "submission"
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <submission acc="E-MTAB-2950">
   <attributes>
@@ -200,8 +189,7 @@ RootPath	E-MTAB/E-MTAB-2950
   </attributes>
 </submission>
 
-</pre>
-</details>
+</xmp></details>
 
 ## Section
 A section is a part of the submission used to group other elements like files, links or even other sections. There're
@@ -224,8 +212,7 @@ Title	The first wave of the zygotic transcription is highly promiscuous
 Description	Initiation of zygotic transcription in mammals is poorly understood
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -245,11 +232,9 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <submission>
 
@@ -272,8 +257,7 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 
 </submission>
 
-</pre>
-</details>
+</xmp></details>
 
 ## Subsection
 A subsection is a section contained inside another section. Any section may have several subsections.
