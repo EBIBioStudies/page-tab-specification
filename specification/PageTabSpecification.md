@@ -96,7 +96,7 @@ Study Type	RNA-seq of non coding RNA
     <valqual>
       <name>Ontology</name>
       <value>EFO</value>
-</valqual>
+    </valqual>
   </attribute>
 </attributes>
 
@@ -276,8 +276,7 @@ Title	Transcription Data
 Description	The data for zygotic transcription in mammals
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -306,11 +305,9 @@ Description	The data for zygotic transcription in mammals
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <submission>
 
@@ -343,8 +340,7 @@ Description	The data for zygotic transcription in mammals
 
 </submission>
 
-</pre>
-</details>
+</xmp></details>
 
 ## Sections Table
 A sections table is an element that allows to group several sections that will be displayed as a table by the UI. Rules:
@@ -369,8 +365,7 @@ DT-1	Group 1 Transcription Data	The data for zygotic transcription in mammals gr
 DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals group 2
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -409,11 +404,9 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <submission>
 
@@ -460,8 +453,7 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
 
 </submission>
 
-</pre>
-</details>
+</xmp></details>
 
 ## Files
 This element represents a file that is attached to a submission section. Whenever a file is defined, it'll be attached
@@ -485,8 +477,7 @@ Description	Summary data
 Type	XLSX File
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -513,11 +504,9 @@ Type	XLSX File
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <section acc="s-E-MTAB-2950" type="Study">
   ...
@@ -542,8 +531,7 @@ Type	XLSX File
 
 </section>
 
-</pre>
-</details>
+</xmp></details>
 
 ### Files Table
 Represents a group of files attached to a section or subsection. The reserved word _Files_ is used to define a files table
@@ -564,8 +552,7 @@ plates/J_Sero_plate_keys.xlsx	Summary data	Library File
 plates/Plate01.csv	Data for Plate 01	Plate Details File
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -601,13 +588,12 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <section acc="s-E-MTAB-2950" type="Study">
+
   ...
 
   <files>
@@ -645,8 +631,7 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 
 </section>
 
-</pre>
-</details>
+</xmp></details>
 
 ## Links
 Element used to represent links that are related to a submission section. A link doesn't necessarily means a web page
@@ -671,8 +656,7 @@ Link	ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data
 Type	Raw data
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -696,13 +680,12 @@ Type	Raw data
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <section acc="s-E-MTAB-2950" type="Study">
+
   ...
 
   <links>
@@ -721,8 +704,7 @@ Type	Raw data
 
 </section>
 
-</pre>
-</details>
+</xmp></details>
 
 ### Links Table
 Represents a group of links attached to a section or subsection. The reserved word _Links_ is used to define a links
@@ -744,8 +726,7 @@ ERP007058	ENA Project	ENA
 ERR632210-ERR632217	ENA Runs	ENA
 ```
 
-<details><summary>JSON</summary>
-<pre>
+<details><summary>JSON</summary><pre>
 
 {
   ...
@@ -781,13 +762,12 @@ ERR632210-ERR632217	ENA Runs	ENA
   ...
 }
 
-</pre>
-</details>
+</pre></details>
 
-<details><summary>XML</summary>
-<pre>
+<details><summary>XML</summary><xmp>
 
 <section acc="s-E-MTAB-2950" type="Study">
+
   ...
 
   <links>
@@ -825,5 +805,4 @@ ERR632210-ERR632217	ENA Runs	ENA
 
 </section>
 
-</pre>
-</details>
+</xmp></details>
