@@ -361,6 +361,8 @@ AccNo2	Attr1 Value	Attr2 Value	AttrN Value
 AccNoN	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
+>Note: If a parent accNo is NOT provided, the brackets still need to be placed but empty: Type[]
+
 ### Examples
 **TSV**
 ```
