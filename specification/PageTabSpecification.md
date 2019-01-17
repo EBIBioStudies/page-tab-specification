@@ -173,7 +173,7 @@ RootPath	E-MTAB/E-MTAB-2950
 
 <details><summary>XML</summary><xmp>
 
-<submission acc="E-MTAB-2950">
+<submission accNo="E-MTAB-2950">
   <attributes>
     <attribute>
       <name>Title</name>
@@ -241,7 +241,7 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 
   ...
 
-  <section acc="s-E-MTAB-2950" type="Study">
+  <section accNo="s-E-MTAB-2950" type="Study">
     <attributes>
         <attribute>
           <name>Title</name>
@@ -314,12 +314,12 @@ Description	The data for zygotic transcription in mammals
 
   ...
 
-  <section acc="s-E-MTAB-2950" type="Study">
+  <section accNo="s-E-MTAB-2950" type="Study">
 
     ...
 
     <subsections>
-      <section acc="DT-1" type="Data">
+      <section accNo="DT-1" type="Data">
         <attributes>
           <attribute>
             <name>Title</name>
@@ -418,13 +418,13 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
 
   ...
 
-  <section acc="s-E-MTAB-2950" type="Study">
+  <section accNo="s-E-MTAB-2950" type="Study">
 
     ...
 
     <subsections>
       <table>
-        <section acc="DT-1" type="Data">
+        <section accNo="DT-1" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
@@ -436,7 +436,7 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
             </attribute>
           </attributes>
         </section>
-        <section acc="DT-2" type="Data">
+        <section accNo="DT-2" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
@@ -514,7 +514,7 @@ Type	XLSX File
 
 <details><summary>XML</summary><xmp>
 
-<section acc="s-E-MTAB-2950" type="Study">
+<section accNo="s-E-MTAB-2950" type="Study">
   ...
 
   <files>
@@ -598,7 +598,7 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 
 <details><summary>XML</summary><xmp>
 
-<section acc="s-E-MTAB-2950" type="Study">
+<section accNo="s-E-MTAB-2950" type="Study">
 
   ...
 
@@ -690,7 +690,7 @@ Type	Raw data
 
 <details><summary>XML</summary><xmp>
 
-<section acc="s-E-MTAB-2950" type="Study">
+<section accNo="s-E-MTAB-2950" type="Study">
 
   ...
 
@@ -772,7 +772,7 @@ ERR632210-ERR632217	ENA Runs	ENA
 
 <details><summary>XML</summary><xmp>
 
-<section acc="s-E-MTAB-2950" type="Study">
+<section accNo="s-E-MTAB-2950" type="Study">
 
   ...
 

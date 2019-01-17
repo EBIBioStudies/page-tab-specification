@@ -219,7 +219,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
 
 ## XML
 ```xml
-<submission acc="S-IHECRE00000919.1">
+<submission accNo="S-IHECRE00000919.1">
   <attributes>
     <attribute>
       <name>RootPath</name>
@@ -243,7 +243,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
     </attribute>
   </attributes>
 
-  <section acc="SECT-001" type="Study">
+  <section accNo="SECT-001" type="Study">
     <attributes>
       <attribute>
         <name>Title</name>
@@ -358,7 +358,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
     </links>
 
     <subsections>
-      <section acc="SUBSECT-001" type="Stranded Total RNA-Seq">
+      <section accNo="SUBSECT-001" type="Stranded Total RNA-Seq">
         <attributes/>
         <links>
           <table>
@@ -408,7 +408,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
         </links>
       </section>
       <table>
-        <section acc="DT-1" type="Data">
+        <section accNo="DT-1" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
@@ -420,7 +420,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
             </attribute>
           </attributes>
         </section>
-        <section acc="DT-2" type="Data">
+        <section accNo="DT-2" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
