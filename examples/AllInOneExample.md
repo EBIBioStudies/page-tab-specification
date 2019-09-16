@@ -1,9 +1,10 @@
 # All In One Example
-Below you'll find an example of a basic submission containing:
-* A root section with a single file, a files table and a single link attached to it
+Below you'll find an example of a basic submission that:
+* Is attached to a project named "blueprint"
+* Has a root section with a single file, a files table and a single link attached to it
 * Some of the attributes in the root section have name and value attributes
-* A sections table
-* A subsection with a links table
+* Has a sections table
+* Has a subsection with a links table
 
 ## TSV
 ```
@@ -219,7 +220,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
 
 ## XML
 ```xml
-<submission accNo="S-IHECRE00000919.1">
+<submission accno="S-IHECRE00000919.1">
   <attributes>
     <attribute>
       <name>RootPath</name>
@@ -243,7 +244,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
     </attribute>
   </attributes>
 
-  <section accNo="SECT-001" type="Study">
+  <section accno="SECT-001" type="Study">
     <attributes>
       <attribute>
         <name>Title</name>
@@ -358,7 +359,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
     </links>
 
     <subsections>
-      <section accNo="SUBSECT-001" type="Stranded Total RNA-Seq">
+      <section accno="SUBSECT-001" type="Stranded Total RNA-Seq">
         <attributes/>
         <links>
           <table>
@@ -408,7 +409,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
         </links>
       </section>
       <table>
-        <section accNo="DT-1" type="Data">
+        <section accno="DT-1" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
@@ -420,7 +421,7 @@ EGAD00001001283	EGA	RNA-Seq	Stranded Total RNA-Seq	EGAX00001273203
             </attribute>
           </attributes>
         </section>
-        <section accNo="DT-2" type="Data">
+        <section accno="DT-2" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>

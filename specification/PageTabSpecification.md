@@ -13,8 +13,8 @@ An attribute is the most basic element in page tab because any element defined i
 attribute has the following characteristics:
 * It's defined by a name / value combination
 * It may be used as a reference to another attribute
-* Its name may have additional details. These are called _Name Attributes_
-* Its value may have additional details. These are called _Value Attributes_
+* Its name may have additional details. These are called *Name Attributes*
+* Its value may have additional details. These are called *Value Attributes*
 
 ### Syntax
 ```
@@ -134,7 +134,7 @@ For this example, let's assume there's already an attribute with value "Org1"
 </xmp></details>
 
 ## Submission
-Root element of the submission. A submission element is created using the reserved word _Submission_. It's mandatory to
+Root element of the submission. A submission element is created using the reserved word *Submission*. It's mandatory to
 have this element in the submission definition.
 
 ### Syntax
@@ -196,7 +196,7 @@ RootPath	E-MTAB/E-MTAB-2950
 A section is a part of the submission used to group other elements like files, links or even other sections. There're
 some rules related to sections:
 1. Sections can be of any type so, there's no reserved word for them
-2. The first section of a submission definition will be the _Root Section_
+2. The first section of a submission definition will be the *Root Section*
 3. Every submission should have at least a root section
 
 ### Syntax
@@ -241,7 +241,7 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 
   ...
 
-  <section accNo="s-E-MTAB-2950" type="Study">
+  <section accno="s-E-MTAB-2950" type="Study">
     <attributes>
         <attribute>
           <name>Title</name>
@@ -314,12 +314,12 @@ Description	The data for zygotic transcription in mammals
 
   ...
 
-  <section accNo="s-E-MTAB-2950" type="Study">
+  <section accno="s-E-MTAB-2950" type="Study">
 
     ...
 
     <subsections>
-      <section accNo="DT-1" type="Data">
+      <section accno="DT-1" type="Data">
         <attributes>
           <attribute>
             <name>Title</name>
@@ -418,13 +418,13 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
 
   ...
 
-  <section accNo="s-E-MTAB-2950" type="Study">
+  <section accno="s-E-MTAB-2950" type="Study">
 
     ...
 
     <subsections>
       <table>
-        <section accNo="DT-1" type="Data">
+        <section accno="DT-1" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
@@ -436,7 +436,7 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
             </attribute>
           </attributes>
         </section>
-        <section accNo="DT-2" type="Data">
+        <section accno="DT-2" type="Data">
           <attributes>
             <attribute>
               <name>Title</name>
@@ -467,7 +467,7 @@ to the immediately previously defined section or subsection. Files can be repres
 table.
 
 ### Single File
-Represents a single file attached to a section or subsection. The reserved word _File_ is used to define a single file.
+Represents a single file attached to a section or subsection. The reserved word *File* is used to define a single file.
 
 #### Syntax
 ```
@@ -540,7 +540,8 @@ Type	XLSX File
 </xmp></details>
 
 ### Files Table
-Represents a group of files attached to a section or subsection. The reserved word _Files_ is used to define a files table
+Represents a group of files attached to a section or subsection. The reserved word *Files* is used to define a files
+table
 
 #### Syntax
 ```
@@ -647,7 +648,7 @@ Whenever a link is defined, it'll be attached to the immediately previously defi
 represented in two ways: single link or links table.
 
 ### Single Link
-Represents a single link related to a section or subsection. The reserved word _Link_ is used to define a single link.
+Represents a single link related to a section or subsection. The reserved word *Link* is used to define a single link.
 
 #### Syntax
 ```
@@ -690,7 +691,7 @@ Type	Raw data
 
 <details><summary>XML</summary><xmp>
 
-<section accNo="s-E-MTAB-2950" type="Study">
+<section accno="s-E-MTAB-2950" type="Study">
 
   ...
 
@@ -713,7 +714,7 @@ Type	Raw data
 </xmp></details>
 
 ### Links Table
-Represents a group of links attached to a section or subsection. The reserved word _Links_ is used to define a links
+Represents a group of links attached to a section or subsection. The reserved word *Links* is used to define a links
 table
 
 #### Syntax
@@ -772,7 +773,7 @@ ERR632210-ERR632217	ENA Runs	ENA
 
 <details><summary>XML</summary><xmp>
 
-<section accNo="s-E-MTAB-2950" type="Study">
+<section accno="s-E-MTAB-2950" type="Study">
 
   ...
 
