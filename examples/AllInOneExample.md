@@ -10,7 +10,7 @@ Below you'll find an example of a basic submission that:
 ```
 Submission	S-IHECRE00000919.1
 Title	venous blood, Monocyte
-ReleaseDate	2016-06-07T10:46:46.000
+ReleaseDate	2016-06-07
 RootPath	S-IHECRE00000919.1
 DataSource	BLUEPRINT
 AttachTo	blueprint

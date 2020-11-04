@@ -133,9 +133,28 @@ For this example, let's assume there's already an attribute with value "Org1"
 
 </xmp></details>
 
+### Special Attributes
+There are some attributes that are used as keywords.
+
+#### Submission Level
+* **Title**: The submission title.
+* **ReleaseDate**: The date when the submission should be public. The expected format is *YYYY-MM-DD*.
+* **AttachTo**: Indicates the project which submission is belongs to.
+* **RootPath**: A folder in the user directory that is used as a base to allocate all the submission files. Example: If
+the attribute *RootPath* has the value *BaseFolder*, a folder with the same name should exist in the user directory,
+and it should contain all the files referenced in the submission.
+
+Please check the [All In One Example](examples/AllInOneExample.md) for more information.
+
+#### Section Level
+* **File List**: A file that can be used as an index to reference and include submission files. The referenced files
+should be either in the user directory or attached to the submission request.
+
+Please check the [File List Example](examples/FileListExample.md) for more information.
+
 ## Submission
-Root element of the submission. A submission element is created using the reserved word *Submission*. It's mandatory to
-have this element in the submission definition.
+Root element of the submission. A submission element is created by using the reserved word *Submission*. It's mandatory
+to have this element in the submission definition.
 
 ### Syntax
 ```
