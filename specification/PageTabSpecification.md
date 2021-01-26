@@ -26,138 +26,125 @@ Value	The Value
 
 ### Examples
 
-#### Simple Attribute
-
-**TSV**
-```
-Study Type	RNA-seq of non coding RNA
-```
-
-<details><summary>JSON</summary>
-
-```json
-{
-  "attributes": [{
-    "name": "Study Type",
-    "value": "RNA-seq of non coding RNA"
-  }]
-}
-```
-</details>
-
-<details><summary>XML</summary>
-
-```xml
-<attributes>
-  <attribute>
-    <name>Study Type</name>
-    <value>RNA-seq of non coding RNA</value>
-  </attribute>
-</attributes>
-```
-</details>
-
-
-#### Detailed Attribute
-**TSV**
-```
-Study Type	RNA-seq of non coding RNA
-[Ontology]	EFO
-(Seq Type)	RNA
-```
-
-<details><summary>JSON</summary>
-
-```json
-{
-  "attributes": [{
-    "name": "Study Type",
-    "value": "RNA-seq of non coding RNA",
-    "nmqual": [{
-      "name": "Seq Type",
-      "value": "RNA"
-    }],
-    "valqual": [{
-      "name": "Ontlogy",
-      "value": "EFO"
+- ### Simple Attribute
+  ### TSV
+  ```
+  Study Type	RNA-seq of non coding RNA
+  ```
+  ---
+  ### JSON
+  ```json
+  {
+    "attributes": [{
+      "name": "Study Type",
+      "value": "RNA-seq of non coding RNA"
     }]
-  }]
-}
-```
-</details>
+  }
+  ```
+  ---
+  ### XML
+  ```xml
+  <attributes>
+    <attribute>
+      <name>Study Type</name>
+      <value>RNA-seq of non coding RNA</value>
+    </attribute>
+  </attributes>
+  ```
 
-<details><summary>XML</summary>
 
-```xml
-<attributes>
-  <attribute>
-    <name>Study Type</name>
-    <value>RNA-seq of non coding RNA</value>
-    <nmqual>
-      <name>Seq Type</name>
-      <value>RNA</value>
-    </nmqual>
-    <valqual>
-      <name>Ontology</name>
-      <value>EFO</value>
-    </valqual>
-  </attribute>
-</attributes>
-```
+- ### Detailed Attribute
+  ### TSV
+  ```
+  Study Type	RNA-seq of non coding RNA
+  [Ontology]	EFO
+  (Seq Type)	RNA
+  ```
+  ---
+  ### JSON
+  ```json
+  {
+    "attributes": [{
+      "name": "Study Type",
+      "value": "RNA-seq of non coding RNA",
+      "nmqual": [{
+        "name": "Seq Type",
+        "value": "RNA"
+      }],
+      "valqual": [{
+        "name": "Ontlogy",
+        "value": "EFO"
+      }]
+    }]
+  }
+  ```
+  ---
+  ### XML
+  ```xml
+  <attributes>
+    <attribute>
+      <name>Study Type</name>
+      <value>RNA-seq of non coding RNA</value>
+      <nmqual>
+        <name>Seq Type</name>
+        <value>RNA</value>
+      </nmqual>
+      <valqual>
+        <name>Ontology</name>
+        <value>EFO</value>
+      </valqual>
+    </attribute>
+  </attributes>
+  ```
 
-</details>
+- ### Reference Attribute
+  For this example, let's assume there's already an attribute with value "Org1"
 
-#### Reference Attribute
-For this example, let's assume there's already an attribute with value "Org1"
+  ### TSV
+  ```
+  <affiliation>	Org1
+  ```
 
-**TSV**
-```
-<affiliation>	Org1
-```
+  ---
+  ### JSON
+  ```json
+  {
+    "attributes": [{
+      "name": "affiliation",
+      "value": "Org1",
+      "isReference": "true"
+    }]
+  }
+  ```
+  ---
+  ### XML
+  ```xml
+  <attributes>
+    <attribute reference="true">
+      <name>affiliation</name>
+      <value>Org1</value>
+    </attribute>
+  </attributes>
+  ```
 
-<details><summary>JSON</summary>
+- ### Special Attributes
+  There are some attributes that are used as keywords.
 
-```json
-{
-  "attributes": [{
-    "name": "affiliation",
-    "value": "Org1",
-    "isReference": "true"
-  }]
-}
-```
-</details>
+  #### Submission Level
+  * **Title**: The submission title.
+  * **ReleaseDate**: The date when the submission should be public. The expected format is *YYYY-MM-DD*.
+  * **AttachTo**: Indicates the project which submission is belongs to.
+  * **RootPath**: A folder in the user directory that is used as a base to allocate all the submission files. Example: If
+  the attribute *RootPath* has the value *BaseFolder*, a folder with the same name should exist in the user directory,
+  and it should contain all the files referenced in the submission.
 
-<details><summary>XML</summary>
+  Please check the [All In One Example](examples/AllInOneExample.md) for more information.
 
-```xml
-<attributes>
-  <attribute reference="true">
-    <name>affiliation</name>
-    <value>Org1</value>
-  </attribute>
-</attributes>
-```
-</details>
+- ### Section Level
+  * **File List**: A file that can be used as an index to reference and include submission files. The referenced files
+  should be either in the user directory or attached to the submission request.
 
-### Special Attributes
-There are some attributes that are used as keywords.
-
-#### Submission Level
-* **Title**: The submission title.
-* **ReleaseDate**: The date when the submission should be public. The expected format is *YYYY-MM-DD*.
-* **AttachTo**: Indicates the project which submission is belongs to.
-* **RootPath**: A folder in the user directory that is used as a base to allocate all the submission files. Example: If
-the attribute *RootPath* has the value *BaseFolder*, a folder with the same name should exist in the user directory,
-and it should contain all the files referenced in the submission.
-
-Please check the [All In One Example](examples/AllInOneExample.md) for more information.
-
-#### Section Level
-* **File List**: A file that can be used as an index to reference and include submission files. The referenced files
-should be either in the user directory or attached to the submission request.
-
-Please check the [File List Example](examples/FileListExample.md) for more information.
+  Please check the [File List Example](examples/FileListExample.md) for more information.
 
 ## Submission
 Root element of the submission. A submission element is created by using the reserved word *Submission*. It's mandatory
@@ -170,16 +157,15 @@ Submission	AccNo
 ```
 
 ### Examples
-**TSV**
+### TSV
 ```
 Submission	E-MTAB-2950
 Title	The first wave of the zygotic transcription is highly promiscuous
 ReleaseDate	2018-09-28
 RootPath	E-MTAB/E-MTAB-2950
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   "accno": "E-MTAB-2950",
@@ -196,10 +182,8 @@ RootPath	E-MTAB/E-MTAB-2950
   "type": "submission"
 }
 ```
-</details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
 <submission accNo="E-MTAB-2950">
   <attributes>
@@ -235,19 +219,17 @@ Type	AccNo
 ```
 
 ### Examples
-**TSV**
+### TSV
 ```
 Study	s-E-MTAB-2950
 Title	The first wave of the zygotic transcription is highly promiscuous
 Description	Initiation of zygotic transcription in mammals is poorly understood
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
-
   "section": {
     "accno": "s-E-MTAB-2950",
     "attributes": [{
@@ -259,15 +241,11 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
     }],
     "type": "Study"
   },
-
   ...
 }
 ```
-</details>
-
-<details><summary>XML</summary>
-
-
+---
+### XML
 ```xml
   ...
   <section accno="s-E-MTAB-2950" type="Study">
@@ -285,8 +263,6 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
   ...
 ```
 
-</details>
-
 ## Subsection
 A subsection is a section contained inside another section. Any section may have several subsections.
 
@@ -297,15 +273,14 @@ Type	AccNo	ParentAccNo
 ```
 
 ### Examples
-**TSV**
+### TSV
 ```
 Data	DT-1	s-E-MTAB-2950
 Title	Transcription Data
 Description	The data for zygotic transcription in mammals
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
@@ -328,11 +303,8 @@ Description	The data for zygotic transcription in mammals
   ...
 }
 ```
-
-</pre></details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
   ...
   <section accno="s-E-MTAB-2950" type="Study">
@@ -355,7 +327,6 @@ Description	The data for zygotic transcription in mammals
   </section>
   ...
 ```
-</details>
 
 ## Sections Table
 A sections table is used to group several sections that will be displayed as a table by the UI. Rules:
@@ -378,15 +349,14 @@ AccNoN	Attr1 Value	Attr2 Value	AttrN Value
 >Note: If a parent accNo is NOT provided, the brackets still need to be placed but empty: Type[]
 
 ### Examples
-**TSV**
+### TSV
 ```
 Data[s-E-MTAB-2950]	Title	Description
 DT-1	Group 1 Transcription Data	The data for zygotic transcription in mammals group 1
 DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals group 2
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
@@ -419,10 +389,8 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
   ...
 }
 ```
-</details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
   ...
   <section accno="s-E-MTAB-2950" type="Study">
@@ -459,7 +427,6 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
   </section>
   ...
 ```
-</details>
 
 ## Files
 This element represents a file that is attached to a submission section. Whenever a file is defined, it'll be attached
@@ -476,15 +443,14 @@ File	Path
 ```
 
 ### Examples
-**TSV**
+### TSV
 ```
 File	plates/J_Sero_plate_keys.xlsx
 Description	Summary data
 Type	XLSX File
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
@@ -505,10 +471,8 @@ Type	XLSX File
   ...
 }
 ```
-</details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
 <section accNo="s-E-MTAB-2950" type="Study">
   ...
@@ -530,7 +494,6 @@ Type	XLSX File
   ...
 </section>
 ```
-</details>
 
 ### Files Table
 Represents a group of files attached to a section or subsection. The reserved word *Files* is used to define a files
@@ -544,16 +507,15 @@ File2 Path	Attr1 Value	Attr2 Value	AttrN Value
 FileN Path	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
-#### Examples
-**TSV**
+### Examples
+### TSV
 ```
 Files	Description	Type
 plates/J_Sero_plate_keys.xlsx	Summary data	Library File
 plates/Plate01.csv	Data for Plate 01	Plate Details File
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
@@ -583,10 +545,8 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
   ...
 }
 ```
-</details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
 <section accNo="s-E-MTAB-2950" type="Study">
   ...
@@ -623,11 +583,9 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
   ...
 </section>
 ```
-</details>
 
 ## Links
-Element used to represent links that are related to a submission section. A link doesn't necessarily means a web page
-but it can also relate to other elements like genes, expressions, FTP locations, etc.
+Element used to represent links that are related to a submission section. A link doesn't necessarily means a web page but it can also relate to other elements like genes, expressions, FTP locations, etc.
 
 Whenever a link is defined, it'll be attached to the immediately previously defined section or subsection. Links can be
 represented in two ways: single link or links table.
@@ -642,14 +600,13 @@ Link	URL
 ```
 
 ### Examples
-**TSV**
+### TSV
 ```
 Link	ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data
 Type	Raw data
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
@@ -667,11 +624,8 @@ Type	Raw data
   ...
 }
 ```
-
-</details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
 <section accno="s-E-MTAB-2950" type="Study">
   ...
@@ -689,7 +643,6 @@ Type	Raw data
   ...
 </section>
 ```
-</details>
 
 ### Links Table
 Represents a group of links attached to a section or subsection. The reserved word *Links* is used to define a links
@@ -703,16 +656,15 @@ Link2 Url	Attr1 Value	Attr2 Value	AttrN Value
 Link3 Url	Attr1 Value	Attr2 Value	AttrN Value
 ```
 
-#### Examples
-**TSV**
+### Examples
+### TSV
 ```
 Links	Description	Type
 ERP007058	ENA Project	ENA
 ERR632210-ERR632217	ENA Runs	ENA
 ```
-
-<details><summary>JSON</summary>
-
+---
+### JSON
 ```json
 {
   ...
@@ -742,10 +694,8 @@ ERR632210-ERR632217	ENA Runs	ENA
   ...
 }
 ```
-</details>
-
-<details><summary>XML</summary>
-
+---
+### XML
 ```xml
 <section accno="s-E-MTAB-2950" type="Study">
   ...
@@ -782,4 +732,3 @@ ERR632210-ERR632217	ENA Runs	ENA
   ...
 </section>
 ```
-</details>
