@@ -31,7 +31,7 @@ Value	The Value
   ```
   Study Type	RNA-seq of non coding RNA
   ```
-  ---
+
   ### JSON
   ```json
   {
@@ -41,7 +41,7 @@ Value	The Value
     }]
   }
   ```
-  ---
+
   ### XML
   ```xml
   <attributes>
@@ -52,7 +52,6 @@ Value	The Value
   </attributes>
   ```
 
-
 - ### Detailed Attribute
   ### TSV
   ```
@@ -60,7 +59,7 @@ Value	The Value
   [Ontology]	EFO
   (Seq Type)	RNA
   ```
-  ---
+
   ### JSON
   ```json
   {
@@ -78,7 +77,7 @@ Value	The Value
     }]
   }
   ```
-  ---
+
   ### XML
   ```xml
   <attributes>
@@ -105,7 +104,6 @@ Value	The Value
   <affiliation>	Org1
   ```
 
-  ---
   ### JSON
   ```json
   {
@@ -116,7 +114,7 @@ Value	The Value
     }]
   }
   ```
-  ---
+
   ### XML
   ```xml
   <attributes>
@@ -164,7 +162,7 @@ Title	The first wave of the zygotic transcription is highly promiscuous
 ReleaseDate	2018-09-28
 RootPath	E-MTAB/E-MTAB-2950
 ```
----
+
 ### JSON
 ```json
 {
@@ -182,7 +180,7 @@ RootPath	E-MTAB/E-MTAB-2950
   "type": "submission"
 }
 ```
----
+
 ### XML
 ```xml
 <submission accNo="E-MTAB-2950">
@@ -202,8 +200,6 @@ RootPath	E-MTAB/E-MTAB-2950
   </attributes>
 </submission>
 ```
-
-</details>
 
 ## Section
 A section is a part of the submission used to group other elements like files, links or even other sections. There're
@@ -225,11 +221,10 @@ Study	s-E-MTAB-2950
 Title	The first wave of the zygotic transcription is highly promiscuous
 Description	Initiation of zygotic transcription in mammals is poorly understood
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
     "accno": "s-E-MTAB-2950",
     "attributes": [{
@@ -240,14 +235,12 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
       "value": "Initiation of zygotic transcription in mammals is poorly understood"
     }],
     "type": "Study"
-  },
-  ...
+  }
 }
 ```
----
+
 ### XML
 ```xml
-  ...
   <section accno="s-E-MTAB-2950" type="Study">
     <attributes>
         <attribute>
@@ -260,7 +253,6 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
         </attribute>
       </attributes>
   </section>
-  ...
 ```
 
 ## Subsection
@@ -279,14 +271,12 @@ Data	DT-1	s-E-MTAB-2950
 Title	Transcription Data
 Description	The data for zygotic transcription in mammals
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
     "accno": "s-E-MTAB-2950",
-    ...
     "subsections": [{
       "accno": "DT-1",
       "attributes": [{
@@ -298,17 +288,13 @@ Description	The data for zygotic transcription in mammals
       }],
       "type": "Data"
     }],
-   ...
   }
-  ...
 }
 ```
----
+
 ### XML
 ```xml
-  ...
   <section accno="s-E-MTAB-2950" type="Study">
-    ...
     <subsections>
       <section accno="DT-1" type="Data">
         <attributes>
@@ -323,9 +309,7 @@ Description	The data for zygotic transcription in mammals
         </attributes>
       </section>
     </subsections>
-  ...
   </section>
-  ...
 ```
 
 ## Sections Table
@@ -355,14 +339,12 @@ Data[s-E-MTAB-2950]	Title	Description
 DT-1	Group 1 Transcription Data	The data for zygotic transcription in mammals group 1
 DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals group 2
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
     "accno": "s-E-MTAB-2950",
-    ...
     "subsections": [[{
       "accno": "DT-1",
       "attributes": [{
@@ -384,48 +366,42 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
       }],
       "type": "Data"
     }]],
-   ...
   }
-  ...
 }
 ```
----
+
 ### XML
 ```xml
-  ...
-  <section accno="s-E-MTAB-2950" type="Study">
-    ...
-    <subsections>
-      <table>
-        <section accno="DT-1" type="Data">
-          <attributes>
-            <attribute>
-              <name>Title</name>
-              <value>Group 1 Transcription Data</value>
-            </attribute>
-            <attribute>
-              <name>Description</name>
-              <value>The data for zygotic transcription in mammals group 1</value>
-            </attribute>
-          </attributes>
-        </section>
-        <section accno="DT-2" type="Data">
-          <attributes>
-            <attribute>
-              <name>Title</name>
-              <value>Group 2 Transcription Data</value>
-            </attribute>
-            <attribute>
-              <name>Description</name>
-              <value>The data for zygotic transcription in mammals group 2</value>
-            </attribute>
-          </attributes>
-        </section>
-      </table>
-    </subsections>
-  ...
-  </section>
-  ...
+<section accno="s-E-MTAB-2950" type="Study">
+  <subsections>
+    <table>
+      <section accno="DT-1" type="Data">
+        <attributes>
+          <attribute>
+            <name>Title</name>
+            <value>Group 1 Transcription Data</value>
+          </attribute>
+          <attribute>
+            <name>Description</name>
+            <value>The data for zygotic transcription in mammals group 1</value>
+          </attribute>
+        </attributes>
+      </section>
+      <section accno="DT-2" type="Data">
+        <attributes>
+          <attribute>
+            <name>Title</name>
+            <value>Group 2 Transcription Data</value>
+          </attribute>
+          <attribute>
+            <name>Description</name>
+            <value>The data for zygotic transcription in mammals group 2</value>
+          </attribute>
+        </attributes>
+      </section>
+    </table>
+  </subsections>
+</section>
 ```
 
 ## Files
@@ -449,13 +425,11 @@ File	plates/J_Sero_plate_keys.xlsx
 Description	Summary data
 Type	XLSX File
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
-    ...
     "files": [{
       "path": "plates/J_Sero_plate_keys.xlsx",
       "attributes": [{
@@ -466,16 +440,13 @@ Type	XLSX File
         "value": "XLSX File"
       }]
     }]
-    ...
   },
-  ...
 }
 ```
----
+
 ### XML
 ```xml
 <section accNo="s-E-MTAB-2950" type="Study">
-  ...
   <files>
     <file>
       <path>plates/J_Sero_plate_keys.xlsx</path>
@@ -491,7 +462,6 @@ Type	XLSX File
       </attributes>
     </file>
   </files>
-  ...
 </section>
 ```
 
@@ -514,13 +484,11 @@ Files	Description	Type
 plates/J_Sero_plate_keys.xlsx	Summary data	Library File
 plates/Plate01.csv	Data for Plate 01	Plate Details File
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
-    ...
     "files": [[{
       "path": "plates/J_Sero_plate_keys.xlsx",
       "attributes": [{
@@ -540,16 +508,13 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
         "value": "Plate Details File"
       }]
     }]]
-    ...
   },
-  ...
 }
 ```
----
+
 ### XML
 ```xml
 <section accNo="s-E-MTAB-2950" type="Study">
-  ...
   <files>
     <table>
       <file>
@@ -580,7 +545,6 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
       </file>
     </table>
   </files>
-  ...
 </section>
 ```
 
@@ -605,13 +569,11 @@ Link	URL
 Link	ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data
 Type	Raw data
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
-    ...
     "links": [{
       "url": "ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data",
       "attributes": [{
@@ -619,16 +581,13 @@ Type	Raw data
         "value": "Raw data"
       }]
     }]
-    ...
   },
-  ...
 }
 ```
----
+
 ### XML
 ```xml
 <section accno="s-E-MTAB-2950" type="Study">
-  ...
   <links>
     <link>
       <url>ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data</url>
@@ -640,7 +599,6 @@ Type	Raw data
       </attributes>
     </link>
   </links>
-  ...
 </section>
 ```
 
@@ -663,13 +621,11 @@ Links	Description	Type
 ERP007058	ENA Project	ENA
 ERR632210-ERR632217	ENA Runs	ENA
 ```
----
+
 ### JSON
 ```json
 {
-  ...
   "section": {
-    ...
     "links": [[{
       "url": "ERP007058",
       "attributes": [{
@@ -689,16 +645,13 @@ ERR632210-ERR632217	ENA Runs	ENA
         "value": "ENA"
       }]
     }]]
-    ...
   },
-  ...
 }
 ```
----
+
 ### XML
 ```xml
 <section accno="s-E-MTAB-2950" type="Study">
-  ...
   <links>
     <table>
       <link>
@@ -729,6 +682,5 @@ ERR632210-ERR632217	ENA Runs	ENA
       </link>
     </table>
   </links>
-  ...
 </section>
 ```
