@@ -1,12 +1,12 @@
 # Page Tab Elements
 Page tab has several elements that allow to represent a submission:
-* Attribute
-* Submission
-* Section
-* Subsection
-* Sections Table
-* Files
-* Links
+* [Attribute](#Attribute)
+* [Submission](#Submission)
+* [Section](#Section)
+* [Subsection](#Subsection)
+* [Sections Table](#Sections-Table)
+* [Files](#Files)
+* [Links](#Links)
 
 ## Attribute
 An attribute is the most basic element in page tab because any element defined in a submission, may have attributes. An
