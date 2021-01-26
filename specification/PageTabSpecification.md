@@ -33,27 +33,29 @@ Value	The Value
 Study Type	RNA-seq of non coding RNA
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   "attributes": [{
     "name": "Study Type",
     "value": "RNA-seq of non coding RNA"
   }]
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <attributes>
   <attribute>
     <name>Study Type</name>
     <value>RNA-seq of non coding RNA</value>
   </attribute>
 </attributes>
-
-</xmp></details>
+```
+</details>
 
 
 #### Detailed Attribute
@@ -64,8 +66,9 @@ Study Type	RNA-seq of non coding RNA
 (Seq Type)	RNA
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   "attributes": [{
     "name": "Study Type",
@@ -80,11 +83,12 @@ Study Type	RNA-seq of non coding RNA
     }]
   }]
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <attributes>
   <attribute>
     <name>Study Type</name>
@@ -99,8 +103,9 @@ Study Type	RNA-seq of non coding RNA
     </valqual>
   </attribute>
 </attributes>
+```
 
-</xmp></details>
+</details>
 
 #### Reference Attribute
 For this example, let's assume there's already an attribute with value "Org1"
@@ -110,8 +115,9 @@ For this example, let's assume there's already an attribute with value "Org1"
 <affiliation>	Org1
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   "attributes": [{
     "name": "affiliation",
@@ -119,19 +125,20 @@ For this example, let's assume there's already an attribute with value "Org1"
     "isReference": "true"
   }]
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <attributes>
   <attribute reference="true">
     <name>affiliation</name>
     <value>Org1</value>
   </attribute>
 </attributes>
-
-</xmp></details>
+```
+</details>
 
 ### Special Attributes
 There are some attributes that are used as keywords.
@@ -171,8 +178,9 @@ ReleaseDate	2018-09-28
 RootPath	E-MTAB/E-MTAB-2950
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   "accno": "E-MTAB-2950",
   "attributes": [{
@@ -187,11 +195,12 @@ RootPath	E-MTAB/E-MTAB-2950
   }],
   "type": "submission"
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <submission accNo="E-MTAB-2950">
   <attributes>
     <attribute>
@@ -208,8 +217,9 @@ RootPath	E-MTAB/E-MTAB-2950
     </attribute>
   </attributes>
 </submission>
+```
 
-</xmp></details>
+</details>
 
 ## Section
 A section is a part of the submission used to group other elements like files, links or even other sections. There're
@@ -232,8 +242,9 @@ Title	The first wave of the zygotic transcription is highly promiscuous
 Description	Initiation of zygotic transcription in mammals is poorly understood
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
 
@@ -251,15 +262,14 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 
   ...
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
 
-<submission>
-
+```xml
   ...
-
   <section accno="s-E-MTAB-2950" type="Study">
     <attributes>
         <attribute>
@@ -272,12 +282,10 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
         </attribute>
       </attributes>
   </section>
-
   ...
+```
 
-</submission>
-
-</xmp></details>
+</details>
 
 ## Subsection
 A subsection is a section contained inside another section. Any section may have several subsections.
@@ -296,16 +304,14 @@ Title	Transcription Data
 Description	The data for zygotic transcription in mammals
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
-
   "section": {
     "accno": "s-E-MTAB-2950",
-
     ...
-
     "subsections": [{
       "accno": "DT-1",
       "attributes": [{
@@ -317,26 +323,20 @@ Description	The data for zygotic transcription in mammals
       }],
       "type": "Data"
     }],
-
    ...
-
   }
-
   ...
 }
+```
 
 </pre></details>
 
-<details><summary>XML</summary><xmp>
+<details><summary>XML</summary>
 
-<submission>
-
+```xml
   ...
-
   <section accno="s-E-MTAB-2950" type="Study">
-
     ...
-
     <subsections>
       <section accno="DT-1" type="Data">
         <attributes>
@@ -351,16 +351,11 @@ Description	The data for zygotic transcription in mammals
         </attributes>
       </section>
     </subsections>
-
   ...
-
   </section>
-
   ...
-
-</submission>
-
-</xmp></details>
+```
+</details>
 
 ## Sections Table
 A sections table is used to group several sections that will be displayed as a table by the UI. Rules:
@@ -390,16 +385,14 @@ DT-1	Group 1 Transcription Data	The data for zygotic transcription in mammals gr
 DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals group 2
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
-
   "section": {
     "accno": "s-E-MTAB-2950",
-
     ...
-
     "subsections": [[{
       "accno": "DT-1",
       "attributes": [{
@@ -421,26 +414,19 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
       }],
       "type": "Data"
     }]],
-
    ...
-
   }
-
   ...
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
-<submission>
-
+```xml
   ...
-
   <section accno="s-E-MTAB-2950" type="Study">
-
     ...
-
     <subsections>
       <table>
         <section accno="DT-1" type="Data">
@@ -469,16 +455,11 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
         </section>
       </table>
     </subsections>
-
   ...
-
   </section>
-
   ...
-
-</submission>
-
-</xmp></details>
+```
+</details>
 
 ## Files
 This element represents a file that is attached to a submission section. Whenever a file is defined, it'll be attached
@@ -502,15 +483,13 @@ Description	Summary data
 Type	XLSX File
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
-
   "section": {
-
     ...
-
     "files": [{
       "path": "plates/J_Sero_plate_keys.xlsx",
       "attributes": [{
@@ -521,21 +500,18 @@ Type	XLSX File
         "value": "XLSX File"
       }]
     }]
-
     ...
-
   },
-
   ...
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <section accNo="s-E-MTAB-2950" type="Study">
   ...
-
   <files>
     <file>
       <path>plates/J_Sero_plate_keys.xlsx</path>
@@ -551,12 +527,10 @@ Type	XLSX File
       </attributes>
     </file>
   </files>
-
   ...
-
 </section>
-
-</xmp></details>
+```
+</details>
 
 ### Files Table
 Represents a group of files attached to a section or subsection. The reserved word *Files* is used to define a files
@@ -578,15 +552,13 @@ plates/J_Sero_plate_keys.xlsx	Summary data	Library File
 plates/Plate01.csv	Data for Plate 01	Plate Details File
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
-
   "section": {
-
     ...
-
     "files": [[{
       "path": "plates/J_Sero_plate_keys.xlsx",
       "attributes": [{
@@ -606,22 +578,18 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
         "value": "Plate Details File"
       }]
     }]]
-
     ...
-
   },
-
   ...
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <section accNo="s-E-MTAB-2950" type="Study">
-
   ...
-
   <files>
     <table>
       <file>
@@ -652,12 +620,10 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
       </file>
     </table>
   </files>
-
   ...
-
 </section>
-
-</xmp></details>
+```
+</details>
 
 ## Links
 Element used to represent links that are related to a submission section. A link doesn't necessarily means a web page
@@ -682,15 +648,13 @@ Link	ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data
 Type	Raw data
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
-
   "section": {
-
     ...
-
     "links": [{
       "url": "ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data",
       "attributes": [{
@@ -698,22 +662,19 @@ Type	Raw data
         "value": "Raw data"
       }]
     }]
-
     ...
-
   },
-
   ...
 }
+```
 
-</pre></details>
+</details>
 
-<details><summary>XML</summary><xmp>
+<details><summary>XML</summary>
 
+```xml
 <section accno="s-E-MTAB-2950" type="Study">
-
   ...
-
   <links>
     <link>
       <url>ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data</url>
@@ -725,12 +686,10 @@ Type	Raw data
       </attributes>
     </link>
   </links>
-
   ...
-
 </section>
-
-</xmp></details>
+```
+</details>
 
 ### Links Table
 Represents a group of links attached to a section or subsection. The reserved word *Links* is used to define a links
@@ -752,15 +711,13 @@ ERP007058	ENA Project	ENA
 ERR632210-ERR632217	ENA Runs	ENA
 ```
 
-<details><summary>JSON</summary><pre>
+<details><summary>JSON</summary>
 
+```json
 {
   ...
-
   "section": {
-
     ...
-
     "links": [[{
       "url": "ERP007058",
       "attributes": [{
@@ -780,22 +737,18 @@ ERR632210-ERR632217	ENA Runs	ENA
         "value": "ENA"
       }]
     }]]
-
     ...
-
   },
-
   ...
 }
+```
+</details>
 
-</pre></details>
+<details><summary>XML</summary>
 
-<details><summary>XML</summary><xmp>
-
+```xml
 <section accno="s-E-MTAB-2950" type="Study">
-
   ...
-
   <links>
     <table>
       <link>
@@ -826,9 +779,7 @@ ERR632210-ERR632217	ENA Runs	ENA
       </link>
     </table>
   </links>
-
   ...
-
 </section>
-
-</xmp></details>
+```
+</details>
