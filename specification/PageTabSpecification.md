@@ -1,12 +1,14 @@
 # Page Tab Elements
 Page tab has several elements that allow to represent a submission:
-* [Attribute](#Attribute)
-* [Submission](#Submission)
-* [Section](#Section)
-* [Subsection](#Subsection)
-* [Sections Table](#Sections-Table)
-* [Files](#Files)
-* [Links](#Links)
+* [Attribute](#attribute)
+* [Submission](#submission)
+* [Section](#section)
+* [Subsection](#subsection)
+* [Sections Table](#sections-table)
+* [Files](#files)
+* [Files Table](#files-table)
+* [Links](#links)
+* [Links Table](#links-table)
 
 ## Attribute
 An attribute is the most basic element in page tab because any element defined in a submission, may have attributes. An
@@ -129,18 +131,18 @@ Value	The Value
   There are some attributes that are used as keywords.
 
   #### Submission Level
-  * **Title**: The submission title.
-  * **ReleaseDate**: The date when the submission should be public. The expected format is *YYYY-MM-DD*.
-  * **AttachTo**: Indicates the project which submission is belongs to.
-  * **RootPath**: A folder in the user directory that is used as a base to allocate all the submission files. Example: If
-  the attribute *RootPath* has the value *BaseFolder*, a folder with the same name should exist in the user directory,
-  and it should contain all the files referenced in the submission.
+    * **Title**: The submission title.
+    * **ReleaseDate**: The date when the submission should be public. The expected format is *YYYY-MM-DD*.
+    * **AttachTo**: Indicates the project which submission is belongs to.
+    * **RootPath**: A folder in the user directory that is used as a base to allocate all the submission files. Example: If
+      the attribute *RootPath* has the value *BaseFolder*, a folder with the same name should exist in the user directory,
+      and it should contain all the files referenced in the submission.
 
   Please check the [All In One Example](examples/AllInOneExample.md) for more information.
 
 - ### Section Level
-  * **File List**: A file that can be used as an index to reference and include submission files. The referenced files
-  should be either in the user directory or attached to the submission request.
+    * **File List**: A file that can be used as an index to reference and include submission files. The referenced files
+      should be either in the user directory or attached to the submission request.
 
   Please check the [File List Example](examples/FileListExample.md) for more information.
 
@@ -287,7 +289,7 @@ Description	The data for zygotic transcription in mammals
         "value": "The data for zygotic transcription in mammals"
       }],
       "type": "Data"
-    }],
+    }]
   }
 }
 ```
@@ -320,7 +322,7 @@ A sections table is used to group several sections that will be displayed as a t
 * The parent accNo is optional
 * If a parent accNo is NOT provided, every section in the table will become a new section
 * If a parent accNo is provided, all the sections in the table will become subsections of the section with the provided
-accNo
+  accNo
 
 ### Syntax
 ```
@@ -365,7 +367,7 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
         "value": "The data for zygotic transcription in mammals group 2"
       }],
       "type": "Data"
-    }]],
+    }]]
   }
 }
 ```
@@ -440,7 +442,7 @@ Type	XLSX File
         "value": "XLSX File"
       }]
     }]
-  },
+  }
 }
 ```
 
@@ -465,7 +467,7 @@ Type	XLSX File
 </section>
 ```
 
-### Files Table
+## Files Table
 Represents a group of files attached to a section or subsection. The reserved word *Files* is used to define a files
 table
 
@@ -508,7 +510,7 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
         "value": "Plate Details File"
       }]
     }]]
-  },
+  }
 }
 ```
 
@@ -548,7 +550,8 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 </section>
 ```
 
-## Links
+
+## Links 
 Element used to represent links that are related to a submission section. A link doesn't necessarily means a web page but it can also relate to other elements like genes, expressions, FTP locations, etc.
 
 Whenever a link is defined, it'll be attached to the immediately previously defined section or subsection. Links can be
@@ -581,7 +584,7 @@ Type	Raw data
         "value": "Raw data"
       }]
     }]
-  },
+  }
 }
 ```
 
@@ -602,7 +605,7 @@ Type	Raw data
 </section>
 ```
 
-### Links Table
+## Links Table
 Represents a group of links attached to a section or subsection. The reserved word *Links* is used to define a links
 table
 
@@ -645,7 +648,7 @@ ERR632210-ERR632217	ENA Runs	ENA
         "value": "ENA"
       }]
     }]]
-  },
+  }
 }
 ```
 
