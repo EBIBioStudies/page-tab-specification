@@ -17,6 +17,8 @@ attribute has the following characteristics:
 * It may be used as a reference to another attribute
 * Its name may have additional details. These are called *Name Attributes*
 * Its value may have additional details. These are called *Value Attributes*
+* The break line character is allowed and will be parsed as a multiline attribute if the given value is surrounded by
+  double quotes
 
 ### Syntax
 ```
