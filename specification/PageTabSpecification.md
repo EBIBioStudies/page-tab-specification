@@ -141,7 +141,7 @@ Value	The Value
       the attribute *RootPath* has the value *BaseFolder*, a folder with the same name should exist in the user directory,
       and it should contain all the files referenced in the submission.
 
-  Please check the [All In One Example](examples/AllInOneExample.md) for more information.
+  Please check the [All In One Example](../examples/AllInOneExample.md) for more information.
 
 - ### Section Level
     * **File List**: A file that can be used as an index to reference and include submission files.
@@ -553,7 +553,7 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 ```
 
 ## File List
-A file list is an externalised [Files Table](#files-table) which can be attached to a section by the special [File List attribute](#section-level). The value of this attribute is the name of the file which contains the table. An example is given in [File List Example](examples/FileListExample.md).
+A file list is an externalised [Files Table](#files-table) which can be attached to a section by the special [File List attribute](#section-level). The value of this attribute is the name of the file which contains the table. An example is given in [File List Example](../examples/FileListExample.md).
 
 
 ## Links 
