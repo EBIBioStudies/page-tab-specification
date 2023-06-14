@@ -7,6 +7,7 @@ Page tab has several elements that allow to represent a submission:
 * [Sections Table](#sections-table)
 * [Files](#files)
 * [Files Table](#files-table)
+* [File List](#file-list)
 * [Links](#links)
 * [Links Table](#links-table)
 
@@ -143,10 +144,9 @@ Value	The Value
   Please check the [All In One Example](examples/AllInOneExample.md) for more information.
 
 - ### Section Level
-    * **File List**: A file that can be used as an index to reference and include submission files. The referenced files
-      should be either in the user directory or attached to the submission request.
+    * **File List**: A file that can be used as an index to reference and include submission files.
+      Please check the [File List](#file-list) section for more information.
 
-  Please check the [File List Example](examples/FileListExample.md) for more information.
 
 ## Submission
 Root element of the submission. A submission element is created by using the reserved word *Submission*. It's mandatory
@@ -471,7 +471,7 @@ Type	XLSX File
 
 ## Files Table
 Represents a group of files attached to a section or subsection. The reserved word *Files* is used to define a files
-table
+table. The referenced files should be either in the user directory or attached to the submission request. Path relative to the user folder in BioStudies should be reflected with a forward slash `/` as the file path separator. 
 
 #### Syntax
 ```
@@ -551,6 +551,9 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
   </files>
 </section>
 ```
+
+## File List
+A file list is an externalised [Files Table](#files-table) which can be attached to a section by the special [File List attribute](#section-level). The value of this attribute is the name of the file which contains the table. An example is given in [File List Example](examples/FileListExample.md).
 
 
 ## Links 

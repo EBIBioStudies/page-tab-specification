@@ -2,7 +2,7 @@
 When a submission need to reference a lot of files, these can be referenced through a external file using the
  **File List** section attribute.
  
-The referenced file should contain a valid page tab file list and must match the submissions format i.e. you can't send
+The referenced file should contain a valid PageTab files table and must match the submissions format i.e. you can't send
 a submission using *TSV* format and reference a file list in *JSON* format.
 
 Below, you'll find an example of a submission that uses the **File List** mechanism.
