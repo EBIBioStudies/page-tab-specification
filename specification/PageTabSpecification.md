@@ -47,16 +47,6 @@ Value	The Value
   }
   ```
 
-  ### XML
-  ```xml
-  <attributes>
-    <attribute>
-      <name>Study Type</name>
-      <value>RNA-seq of non coding RNA</value>
-    </attribute>
-  </attributes>
-  ```
-
 - ### Detailed Attribute
   ### TSV
   ```
@@ -83,24 +73,6 @@ Value	The Value
   }
   ```
 
-  ### XML
-  ```xml
-  <attributes>
-    <attribute>
-      <name>Study Type</name>
-      <value>RNA-seq of non coding RNA</value>
-      <nmqual>
-        <name>Seq Type</name>
-        <value>RNA</value>
-      </nmqual>
-      <valqual>
-        <name>Ontology</name>
-        <value>EFO</value>
-      </valqual>
-    </attribute>
-  </attributes>
-  ```
-
 - ### Reference Attribute
   For this example, let's assume there's already an attribute with value "Org1"
 
@@ -118,16 +90,6 @@ Value	The Value
       "isReference": "true"
     }]
   }
-  ```
-
-  ### XML
-  ```xml
-  <attributes>
-    <attribute reference="true">
-      <name>affiliation</name>
-      <value>Org1</value>
-    </attribute>
-  </attributes>
   ```
 
 - ### Special Attributes
@@ -185,26 +147,6 @@ RootPath	E-MTAB/E-MTAB-2950
 }
 ```
 
-### XML
-```xml
-<submission accNo="E-MTAB-2950">
-  <attributes>
-    <attribute>
-      <name>Title</name>
-      <value>The first wave of the zygotic transcription is highly promiscuous</value>
-    </attribute>
-    <attribute>
-      <name>ReleaseDate</name>
-      <value>2018-09-28</value>
-    </attribute>
-    <attribute>
-      <name>RootPath</name>
-      <value>E-MTAB/E-MTAB-2950</value>
-    </attribute>
-  </attributes>
-</submission>
-```
-
 ## Section
 A section is a part of the submission used to group other elements like files, links or even other sections. There're
 some rules related to sections:
@@ -243,22 +185,6 @@ Description	Initiation of zygotic transcription in mammals is poorly understood
 }
 ```
 
-### XML
-```xml
-  <section accno="s-E-MTAB-2950" type="Study">
-    <attributes>
-        <attribute>
-          <name>Title</name>
-          <value>The first wave of the zygotic transcription is highly promiscuous</value>
-        </attribute>
-        <attribute>
-          <name>Description</name>
-          <value>Initiation of zygotic transcription in mammals is poorly understood</value>
-        </attribute>
-      </attributes>
-  </section>
-```
-
 ## Subsection
 A subsection is a section contained inside another section. Any section may have several subsections.
 
@@ -294,26 +220,6 @@ Description	The data for zygotic transcription in mammals
     }]
   }
 }
-```
-
-### XML
-```xml
-  <section accno="s-E-MTAB-2950" type="Study">
-    <subsections>
-      <section accno="DT-1" type="Data">
-        <attributes>
-          <attribute>
-            <name>Title</name>
-            <value>Transcription Data</value>
-          </attribute>
-          <attribute>
-            <name>Description</name>
-            <value>The data for zygotic transcription in mammals</value>
-          </attribute>
-        </attributes>
-      </section>
-    </subsections>
-  </section>
 ```
 
 ## Sections Table
@@ -374,40 +280,6 @@ DT-2	Group 2 Transcription Data	The data for zygotic transcription in mammals gr
 }
 ```
 
-### XML
-```xml
-<section accno="s-E-MTAB-2950" type="Study">
-  <subsections>
-    <table>
-      <section accno="DT-1" type="Data">
-        <attributes>
-          <attribute>
-            <name>Title</name>
-            <value>Group 1 Transcription Data</value>
-          </attribute>
-          <attribute>
-            <name>Description</name>
-            <value>The data for zygotic transcription in mammals group 1</value>
-          </attribute>
-        </attributes>
-      </section>
-      <section accno="DT-2" type="Data">
-        <attributes>
-          <attribute>
-            <name>Title</name>
-            <value>Group 2 Transcription Data</value>
-          </attribute>
-          <attribute>
-            <name>Description</name>
-            <value>The data for zygotic transcription in mammals group 2</value>
-          </attribute>
-        </attributes>
-      </section>
-    </table>
-  </subsections>
-</section>
-```
-
 ## Files
 This element represents a file that is attached to a submission section. Whenever a file is defined, it'll be attached
 to the immediately previously defined section or subsection. Files can be represented in two ways: single file or files
@@ -446,27 +318,6 @@ Type	XLSX File
     }]
   }
 }
-```
-
-### XML
-```xml
-<section accNo="s-E-MTAB-2950" type="Study">
-  <files>
-    <file>
-      <path>plates/J_Sero_plate_keys.xlsx</path>
-      <attributes>
-        <attribute>
-          <name>Description</name>
-          <value>Summary data</value>
-        </attribute>
-        <attribute>
-          <name>Type</name>
-          <value>XLSX File</value>
-        </attribute>
-      </attributes>
-    </file>
-  </files>
-</section>
 ```
 
 ## Files Table
@@ -516,42 +367,6 @@ plates/Plate01.csv	Data for Plate 01	Plate Details File
 }
 ```
 
-### XML
-```xml
-<section accNo="s-E-MTAB-2950" type="Study">
-  <files>
-    <table>
-      <file>
-        <path>plates/J_Sero_plate_keys.xlsx</path>
-        <attributes>
-          <attribute>
-            <name>Description</name>
-            <value>Summary data</value>
-          </attribute>
-          <attribute>
-            <name>Type</name>
-            <value>Library File</value>
-          </attribute>
-        </attributes>
-      </file>
-      <file>
-        <path>plates/Plate01.csv</path>
-        <attributes>
-          <attribute>
-            <name>Description</name>
-            <value>Data for Plate 01</value>
-          </attribute>
-          <attribute>
-            <name>Type</name>
-            <value>Plate Details File</value>
-          </attribute>
-        </attributes>
-      </file>
-    </table>
-  </files>
-</section>
-```
-
 ## File List
 A file list is an externalised [Files Table](#files-table) which can be attached to a section by the special [File List attribute](#section-level). The value of this attribute is the name of the file which contains the table. An example is given in [File List Example](../examples/FileListExample.md).
 
@@ -591,23 +406,6 @@ Type	Raw data
     }]
   }
 }
-```
-
-### XML
-```xml
-<section accno="s-E-MTAB-2950" type="Study">
-  <links>
-    <link>
-      <url>ftp://ftp.biostudies.ebi.ac.uk/pub/S-BSMS/S-BSMS0-99/S-BSMS6/raw_data</url>
-      <attributes>
-        <attribute>
-          <name>Type</name>
-          <value>Raw data</value>
-        </attribute>
-      </attributes>
-    </link>
-  </links>
-</section>
 ```
 
 ## Links Table
@@ -655,40 +453,4 @@ ERR632210-ERR632217	ENA Runs	ENA
     }]]
   }
 }
-```
-
-### XML
-```xml
-<section accno="s-E-MTAB-2950" type="Study">
-  <links>
-    <table>
-      <link>
-        <url>ERP007058</url>
-        <attributes>
-          <attribute>
-            <name>Description</name>
-            <value>ENA Project</value>
-          </attribute>
-          <attribute>
-            <name>Type</name>
-            <value>ENA</value>
-          </attribute>
-        </attributes>
-      </link>
-      <link>
-        <url>ERR632210</url>
-        <attributes>
-          <attribute>
-            <name>Description</name>
-            <value>ENA Runs</value>
-          </attribute>
-          <attribute>
-            <name>Type</name>
-            <value>ENA</value>
-          </attribute>
-        </attributes>
-      </link>
-    </table>
-  </links>
-</section>
 ```
