@@ -1,7 +1,6 @@
 # Page Tab
 Page tab is an specification language used to describe a submission in BioStudies. Page tab can be used in three formats:
 * TSV (Tab separated)
-* XML
 * JSON
 
 In order to define a submission, these rules must be followed:
