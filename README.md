@@ -14,3 +14,4 @@ Please refer to the resources below to find more information.
 * [Page Tab Specification](specification/PageTabSpecification.md)
 * [All In One Example](examples/AllInOneExample.md)
 * [File List Example](examples/FileListExample.md)
+* [API Submission Example](examples/ApiSubmissionExample.md)
